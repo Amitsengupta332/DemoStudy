@@ -1,0 +1,119 @@
+<section
+  id="home"
+  class="relative min-h-[645px] overflow-hidden"
+>
+  <!-- Background Image Slider -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/images/australia_hero.avif"
+      alt="Australia Hero 1"
+      class="hero-slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700"
+    />
+
+    <img
+      src="/images/australia_campus_student_hero.avif"
+      alt="Australia Hero 2"
+      class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
+    />
+
+    <img
+      src="/images/australia_campus_male_student_hero.avif"
+      alt="Australia Hero 3"
+      class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
+    />
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 z-[1] bg-gradient-to-r from-black/10 via-white/10 to-[#e6d6cf]/70"></div>
+
+  <!-- Slider Buttons -->
+  <button
+    id="heroPrev"
+    type="button"
+    class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/80 hover:bg-white text-[#76264d] shadow-lg flex items-center justify-center transition"
+    aria-label="Previous slide"
+  >
+    <span class="text-3xl leading-none -mt-1">&#8249;</span>
+  </button>
+
+  <button
+    id="heroNext"
+    type="button"
+    class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/80 hover:bg-white text-[#76264d] shadow-lg flex items-center justify-center transition"
+    aria-label="Next slide"
+  >
+    <span class="text-3xl leading-none -mt-1">&#8250;</span>
+  </button>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-[1200px] mx-auto px-4 min-h-[645px] flex items-center">
+    <div
+      class="w-full lg:w-[58%] ml-auto translate-x-[130px] pt-[125px] lg:pt-[95px] text-center lg:text-left"
+    >
+
+      <!-- Hero Title -->
+      <h1 class="uppercase leading-[0.88] tracking-[-1px]">
+        <span
+          id="heroTitleOne"
+          class="block font-['Anton'] text-[#76264d] text-[48px] sm:text-[68px] lg:text-[76px]"
+        >
+          Your Pathway
+        </span>
+
+        <span
+          id="heroTitleTwo"
+          class="block font-['Anton'] text-[#76264d] text-[48px] sm:text-[68px] lg:text-[76px]"
+        >
+          to World-Class
+        </span>
+
+        <span
+          id="heroTitleThree"
+          class="block font-['Anton'] text-[#2b0012] text-[72px] sm:text-[96px] lg:text-[110px]"
+        >
+          Australian Education.
+        </span>
+      </h1>
+
+      <!-- Slogan -->
+      <div
+        class="mt-6 sm:mt-7 mx-auto lg:mx-0 max-w-[515px] bg-gradient-to-r from-transparent via-[#5a2038] to-transparent py-2.5 px-6"
+      >
+        <p
+          id="heroSlogan"
+          class="font-['Oswald'] text-white uppercase font-bold text-[24px] sm:text-[34px] tracking-[1px] leading-none"
+        >
+          Grow. Study. Succeed.
+        </p>
+      </div>
+
+      <!-- Service Tags -->
+      <div id="heroTags" class="mt-8 flex flex-wrap justify-center lg:justify-start gap-[4px] max-w-[690px]">
+        <span class="font-['Oswald'] bg-[#70264a]/95 text-white px-2 py-[2px] text-[16px] sm:text-[21px] font-semibold leading-tight">
+          Edu loan assistance
+        </span>
+
+        <span class="font-['Oswald'] bg-[#70264a]/95 text-white px-2 py-[2px] text-[16px] sm:text-[21px] font-semibold leading-tight">
+          English test preparation
+        </span>
+
+        <span class="font-['Oswald'] bg-[#70264a]/95 text-white px-2 py-[2px] text-[16px] sm:text-[21px] font-semibold leading-tight">
+          Personalised counselling
+        </span>
+
+        <span class="font-['Oswald'] bg-[#70264a]/95 text-white px-2 py-[2px] text-[16px] sm:text-[21px] font-semibold leading-tight">
+          Application processing
+        </span>
+
+        <span class="font-['Oswald'] bg-[#70264a]/95 text-white px-2 py-[2px] text-[16px] sm:text-[21px] font-semibold leading-tight">
+          Scholarship options
+        </span>
+
+        <span class="font-['Oswald'] bg-[#70264a]/95 text-white px-2 py-[2px] text-[16px] sm:text-[21px] font-semibold leading-tight">
+          Visa guidance
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
