@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog Details - Study Australia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/blog-details.js"></script>
+</head>
+
+<body class="font-poppins bg-white">
+
+  <div data-component="/src/components/navbar.html"></div>
+
+  <main>
+
+    <!-- Blog Banner -->
+    <section class="relative bg-[#f7eee9] pt-[150px] pb-16 overflow-hidden">
+      <div class="absolute inset-0 opacity-60 pointer-events-none">
+        <div class="absolute -top-20 left-[20%] w-[180px] h-[650px] bg-white/45 rotate-[-32deg]"></div>
+        <div class="absolute -bottom-32 right-[28%] w-[150px] h-[650px] bg-white/45 rotate-[-32deg]"></div>
+      </div>
+
+      <div class="relative max-w-[1100px] mx-auto px-4 text-center">
+        <h1 id="blogBannerTitle" class="text-[#001f5c] text-[34px] sm:text-[46px] lg:text-[54px] leading-tight font-extrabold">
+          Blog Details
+        </h1>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-[#001f5c] text-[16px] font-medium">
+          <a href="/" class="hover:text-[#ef6c00]">Home</a>
+          <span>›</span>
+          <a href="/#blogs" class="hover:text-[#ef6c00]">Blog</a>
+          <span>›</span>
+          <span id="blogBreadcrumb" class="text-[#ef6c00]">Blog Details</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="bg-white py-14 lg:py-16">
+      <div class="max-w-[1050px] mx-auto px-4 sm:px-6 lg:px-8">
+
+        <article>
+          <div class="rounded-[14px] overflow-hidden shadow-[0_10px_28px_rgba(0,0,0,0.14)] mb-9">
+            <img
+              id="blogImage"
+              src=""
+              alt=""
+              class="w-full h-[260px] sm:h-[420px] lg:h-[520px] object-cover"
+            />
+          </div>
+
+          <div class="flex flex-wrap items-center gap-5 text-[#001f5c] text-[15px] font-medium mb-6">
+            <span id="blogDate"></span>
+            <span id="blogAuthor"></span>
+            <span id="blogCategory"></span>
+          </div>
+
+          <h2 id="blogTitle" class="text-[#001f5c] text-[30px] sm:text-[40px] lg:text-[46px] leading-tight font-extrabold mb-7"></h2>
+
+          <div id="blogContent" class="space-y-6 text-[#10285d] text-[17px] leading-[1.9]"></div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="/src/components/footer.html"></div>
+
+</body>
+</html>

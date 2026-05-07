@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Service Details - Study Australia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/service-details.js"></script>
+</head>
+
+<body class="font-poppins bg-white">
+
+  <!-- Navbar -->
+  <div data-component="/src/components/navbar.html"></div>
+
+  <main>
+
+    <!-- Page Banner -->
+    <section class="relative bg-gradient-to-r from-[#2f6f43] to-[#0f8f7a] pt-[145px] pb-16 overflow-hidden">
+      <div class="absolute inset-0 opacity-10 bg-[url('/images/australia_hero.avif')] bg-cover bg-center"></div>
+
+      <div class="relative max-w-[1220px] mx-auto px-4 text-center">
+        <h1 id="serviceBannerTitle" class="text-white text-[38px] sm:text-[48px] font-extrabold leading-tight">
+          Service Details
+        </h1>
+
+        <div class="mt-4 text-white/90 text-[14px]">
+          <a href="/" class="hover:text-[#a6c915]">Home</a>
+          <span class="mx-2">›</span>
+          <span>Services</span>
+          <span class="mx-2">›</span>
+          <span id="serviceBreadcrumb" class="text-[#a6c915]">Service Details</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Layout -->
+    <section class="bg-white py-14 lg:py-16">
+      <div class="max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-[270px_1fr] gap-10">
+
+          <!-- Sidebar -->
+          <aside class="space-y-6">
+
+            <div>
+              <h3 class="text-[#001f5c] text-[22px] font-extrabold mb-4">
+                More Services
+              </h3>
+
+              <div class="space-y-3" id="serviceSidebarLinks">
+                <a href="/service-details.html?service=admission"
+                  data-service-link="admission"
+                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                  Admission
+                  <span>→</span>
+                </a>
+
+                <a href="/service-details.html?service=scholarships"
+                  data-service-link="scholarships"
+                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                  Scholarships
+                  <span>→</span>
+                </a>
+
+                <a href="/service-details.html?service=visa"
+                  data-service-link="visa"
+                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                  Visa Guidance
+                  <span>→</span>
+                </a>
+
+                <a href="/service-details.html?service=departure"
+                  data-service-link="departure"
+                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                  Departure Guidance
+                  <span>→</span>
+                </a>
+
+                <a href="/service-details.html?service=career"
+                  data-service-link="career"
+                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                  Career Counseling
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg-[#2b446f] rounded-[8px] p-5 text-white">
+              <h3 class="text-[18px] font-extrabold mb-4">
+                Contact Us for Any Query
+              </h3>
+
+              <form class="space-y-3">
+                <input type="text" placeholder="Your Name"
+                  class="w-full h-11 rounded-[5px] px-3 text-[#001f5c] text-[14px] outline-none" />
+
+                <input type="email" placeholder="Your Email"
+                  class="w-full h-11 rounded-[5px] px-3 text-[#001f5c] text-[14px] outline-none" />
+
+                <input type="tel" placeholder="Phone"
+                  class="w-full h-11 rounded-[5px] px-3 text-[#001f5c] text-[14px] outline-none" />
+
+                <textarea placeholder="What's your question?"
+                  class="w-full h-24 rounded-[5px] px-3 py-3 text-[#001f5c] text-[14px] outline-none resize-none"></textarea>
+
+                <button type="button"
+                  class="w-full h-11 bg-[#ef6c00] hover:bg-[#d95f00] rounded-[6px] text-white text-[14px] font-extrabold uppercase transition">
+                  Submit
+                </button>
+              </form>
+            </div>
+
+          </aside>
+
+          <!-- Right Content -->
+          <article>
+            <img id="serviceImage"
+              src=""
+              alt=""
+              class="w-full h-[260px] sm:h-[330px] lg:h-[390px] object-cover rounded-[8px] mb-9" />
+
+            <h2 id="serviceTitle"
+              class="text-[#001f5c] text-[30px] sm:text-[38px] lg:text-[42px] leading-tight font-extrabold mb-6">
+            </h2>
+
+            <div id="serviceIntro" class="space-y-5 text-[#10285d] text-[16px] leading-[1.8]"></div>
+
+            <div id="serviceSteps" class="mt-10 space-y-8"></div>
+
+            <div class="mt-12">
+              <h3 id="serviceWhyTitle" class="text-[#001f5c] text-[26px] font-extrabold mb-4"></h3>
+              <ul id="serviceWhyList" class="space-y-3 text-[#10285d] text-[16px] leading-[1.7]"></ul>
+            </div>
+
+            <div class="mt-10 bg-[#f2f7fb] border-l-4 border-[#9ac70f] p-6 rounded-[8px]">
+              <h3 id="serviceCtaTitle" class="text-[#001f5c] text-[26px] font-extrabold mb-3"></h3>
+
+              <p id="serviceCtaText" class="text-[#10285d] text-[16px] leading-[1.7] mb-5"></p>
+
+              <a href="/#consultation"
+                class="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[#ef6c00] text-white text-[14px] font-extrabold uppercase hover:bg-[#d95f00] transition">
+                Get Free Consultation
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div data-component="/src/components/footer.html"></div>
+
+</body>
+</html>
