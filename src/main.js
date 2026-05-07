@@ -196,4 +196,30 @@ function initHeroSlider() {
   startHeroSlider();
 }
 
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq-btn");
+    const content = item.querySelector(".faq-content");
+    const icon = item.querySelector(".faq-icon");
+
+    button.addEventListener("click", () => {
+      const isOpen = !content.classList.contains("hidden");
+
+      faqItems.forEach((otherItem) => {
+        otherItem.querySelector(".faq-content").classList.add("hidden");
+        otherItem.querySelector(".faq-icon").textContent = "+";
+      });
+
+      if (!isOpen) {
+        content.classList.remove("hidden");
+        icon.textContent = "−";
+      }
+    });
+  });
+}
+
+setTimeout(initFaqAccordion, 300);
+
 loadComponents();
