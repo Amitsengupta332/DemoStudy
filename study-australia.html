@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why Study In Australia</title>
 
-  <!-- Tailwind CDN, only use this if your project does not already include Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/service-details.js"></script>
 </head>
 
 <body class="bg-white text-black">
-
+  <!-- Navbar -->
+  <div data-component="/src/components/navbar.html"></div>
   <main>
+
 
     <!-- Hero / Page Banner -->
     <section class="relative bg-[#eef5f7] py-16 lg:py-24 overflow-hidden">
@@ -39,21 +50,19 @@
             </h1>
 
             <p class="mt-7 max-w-[720px] text-[16px] sm:text-[18px] leading-[1.75] text-[#536075]">
-              Australia is one of the leading study destinations for international students. It offers globally recognised qualifications, high-quality education, modern campuses, multicultural cities, career-focused programs and strong student support services.
+              Australia is one of the leading study destinations for international students. It offers globally
+              recognised qualifications, high-quality education, modern campuses, multicultural cities, career-focused
+              programs and strong student support services.
             </p>
 
             <div class="mt-8 flex flex-col sm:flex-row gap-4">
-              <a
-                href="#studyDetails"
-                class="inline-flex items-center justify-center h-[54px] px-8 rounded-[10px] bg-[#25a9d6] text-white text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#168fba] transition"
-              >
+              <a href="#studyDetails"
+                class="inline-flex items-center justify-center h-[54px] px-8 rounded-[10px] bg-[#25a9d6] text-white text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#168fba] transition">
                 Explore Details
               </a>
 
-              <a
-                href="/index.html#contact"
-                class="inline-flex items-center justify-center h-[54px] px-8 rounded-[10px] bg-white border border-[#d8e2ef] text-[#0d3f98] text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#f8fbff] transition"
-              >
+              <a href="/contact.html"
+                class="inline-flex items-center justify-center h-[54px] px-8 rounded-[10px] bg-white border border-[#d8e2ef] text-[#0d3f98] text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#f8fbff] transition">
                 Get Free Counselling
               </a>
             </div>
@@ -62,11 +71,8 @@
           <!-- Right Image -->
           <div>
             <div class="rounded-[34px] overflow-hidden bg-white shadow-[0_18px_45px_rgba(35,74,145,0.12)]">
-              <img
-                src="/images/why-study-australia.avif"
-                alt="Study in Australia"
-                class="w-full h-[420px] lg:h-[520px] object-cover"
-              />
+              <img src="/images/why-study-australia.avif" alt="Study in Australia"
+                class="w-full h-[420px] lg:h-[520px] object-cover" />
             </div>
           </div>
 
@@ -98,7 +104,8 @@
           </h2>
 
           <p class="mt-7 max-w-[850px] text-[16px] sm:text-[18px] leading-[1.7] text-[#536075]">
-            From world-class universities to flexible courses and post-study career options, Australia provides international students with a strong foundation for academic and professional success.
+            From world-class universities to flexible courses and post-study career options, Australia provides
+            international students with a strong foundation for academic and professional success.
           </p>
         </div>
 
@@ -109,12 +116,15 @@
 
             <!-- Item 1 -->
             <div class="flex gap-5 sm:gap-6 pb-9 border-b border-[#cfd8e6]">
-              <div class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
+              <div
+                class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
                 <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
                   <rect x="6" y="7" width="15" height="18" rx="2" stroke="currentColor" stroke-width="1.8" />
-                  <path d="M10 12H17M10 16H17M10 20H15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M10 12H17M10 16H17M10 20H15" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" />
                   <circle cx="23" cy="19" r="4" stroke="currentColor" stroke-width="1.8" />
-                  <path d="M20.5 23L19 27L23 25.2L27 27L25.5 23" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M20.5 23L19 27L23 25.2L27 27L25.5 23" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
                 </svg>
               </div>
 
@@ -124,17 +134,22 @@
                 </h3>
 
                 <p class="mt-4 text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
-                  Australian degrees are recognised and valued across the globe. This means that if you study in Australia and complete a program, your qualification can support employment opportunities or further education in many countries worldwide.
+                  Australian degrees are recognised and valued across the globe. This means that if you study in
+                  Australia and complete a program, your qualification can support employment opportunities or further
+                  education in many countries worldwide.
                 </p>
               </div>
             </div>
 
             <!-- Item 2 -->
             <div class="flex gap-5 sm:gap-6 py-9 border-b border-[#cfd8e6]">
-              <div class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
+              <div
+                class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
                 <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
-                  <path d="M7 24C9 18 12 13 16 8C20 13 23 18 25 24H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                  <path d="M12 24C13 20 14 17 16 14C18 17 19 20 20 24" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M7 24C9 18 12 13 16 8C20 13 23 18 25 24H7Z" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
+                  <path d="M12 24C13 20 14 17 16 14C18 17 19 20 20 24" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
                 </svg>
               </div>
 
@@ -144,17 +159,20 @@
                 </h3>
 
                 <p class="mt-4 text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
-                  Australia is known for student-friendly cities that combine world-class education, cultural diversity, transport access, lifestyle benefits and strong student communities.
+                  Australia is known for student-friendly cities that combine world-class education, cultural diversity,
+                  transport access, lifestyle benefits and strong student communities.
                 </p>
               </div>
             </div>
 
             <!-- Item 3 -->
             <div class="flex gap-5 sm:gap-6 py-9 border-b border-[#cfd8e6]">
-              <div class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
+              <div
+                class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
                 <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
                   <rect x="6" y="9" width="20" height="15" rx="2" stroke="currentColor" stroke-width="1.8" />
-                  <path d="M11 9V7C11 5.9 11.9 5 13 5H19C20.1 5 21 5.9 21 7V9" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M11 9V7C11 5.9 11.9 5 13 5H19C20.1 5 21 5.9 21 7V9" stroke="currentColor"
+                    stroke-width="1.8" />
                   <path d="M6 15H26" stroke="currentColor" stroke-width="1.8" />
                 </svg>
               </div>
@@ -165,17 +183,21 @@
                 </h3>
 
                 <p class="mt-4 text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
-                  Students who complete eligible qualifications in Australia may access post-study work opportunities, helping them gain practical experience and build a stronger career pathway after graduation.
+                  Students who complete eligible qualifications in Australia may access post-study work opportunities,
+                  helping them gain practical experience and build a stronger career pathway after graduation.
                 </p>
               </div>
             </div>
 
             <!-- Item 4 -->
             <div class="flex gap-5 sm:gap-6 py-9 border-b border-[#cfd8e6]">
-              <div class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
+              <div
+                class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
                 <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
-                  <path d="M16 5L27 11L16 17L5 11L16 5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                  <path d="M9 14V20C9 22 12 25 16 25C20 25 23 22 23 20V14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M16 5L27 11L16 17L5 11L16 5Z" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
+                  <path d="M9 14V20C9 22 12 25 16 25C20 25 23 22 23 20V14" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" />
                 </svg>
               </div>
 
@@ -185,17 +207,20 @@
                 </h3>
 
                 <p class="mt-4 text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
-                  Australia is home to many highly regarded universities offering excellent teaching quality, research opportunities, modern facilities and a wide range of programs across different disciplines.
+                  Australia is home to many highly regarded universities offering excellent teaching quality, research
+                  opportunities, modern facilities and a wide range of programs across different disciplines.
                 </p>
               </div>
             </div>
 
             <!-- Item 5 -->
             <div class="flex gap-5 sm:gap-6 py-9 border-b border-[#cfd8e6]">
-              <div class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
+              <div
+                class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
                 <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
                   <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.8" />
-                  <path d="M11 17L14 20L21 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M11 17L14 20L21 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
               </div>
 
@@ -205,17 +230,20 @@
                 </h3>
 
                 <p class="mt-4 text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
-                  Australia offers a welcoming multicultural environment where international students can experience diverse communities, modern cities and a supportive campus lifestyle.
+                  Australia offers a welcoming multicultural environment where international students can experience
+                  diverse communities, modern cities and a supportive campus lifestyle.
                 </p>
               </div>
             </div>
 
             <!-- Item 6 -->
             <div class="flex gap-5 sm:gap-6 py-9 border-b border-[#cfd8e6]">
-              <div class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
+              <div
+                class="shrink-0 w-[54px] h-[54px] rounded-full border border-[#d8e2ef] flex items-center justify-center text-[#0d3f98]">
                 <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
                   <path d="M8 7H24V25H8V7Z" stroke="currentColor" stroke-width="1.8" />
-                  <path d="M12 12H20M12 16H20M12 20H17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M12 12H20M12 16H20M12 20H17" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" />
                 </svg>
               </div>
 
@@ -225,7 +253,8 @@
                 </h3>
 
                 <p class="mt-4 text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
-                  Students can choose from undergraduate, postgraduate, vocational and pathway programs across Business, IT, Engineering, Health, Hospitality, Trades and more.
+                  Students can choose from undergraduate, postgraduate, vocational and pathway programs across Business,
+                  IT, Engineering, Health, Hospitality, Trades and more.
                 </p>
               </div>
             </div>
@@ -241,7 +270,8 @@
               </h3>
 
               <p class="mt-4 text-[15px] leading-[1.7] text-[#536075]">
-                Get expert support to choose the right course, university and intake based on your academic profile, budget and long-term career goals.
+                Get expert support to choose the right course, university and intake based on your academic profile,
+                budget and long-term career goals.
               </p>
 
               <div class="mt-7 rounded-[20px] bg-white border border-[#d8e2ef] p-5">
@@ -273,10 +303,8 @@
                 </ul>
               </div>
 
-              <a
-                href="/index.html#contact"
-                class="mt-7 inline-flex w-full items-center justify-center h-[52px] rounded-[10px] bg-[#25a9d6] text-white text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#168fba] transition"
-              >
+              <a href="/index.html#contact"
+                class="mt-7 inline-flex w-full items-center justify-center h-[52px] rounded-[10px] bg-[#25a9d6] text-white text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#168fba] transition">
                 Get Free Counselling
               </a>
 
@@ -316,7 +344,9 @@
               </h2>
 
               <p class="mt-7 max-w-[410px] text-[16px] sm:text-[18px] leading-[1.6] text-black">
-                The cost of studying in Australia depends on the university location, course level, institution type and available scholarships. Students should also plan for living expenses, accommodation, travel, groceries and personal costs.
+                The cost of studying in Australia depends on the university location, course level, institution type and
+                available scholarships. Students should also plan for living expenses, accommodation, travel, groceries
+                and personal costs.
               </p>
             </div>
 
@@ -325,22 +355,26 @@
 
               <!-- Tuition Fees -->
               <div>
-                <div class="inline-flex w-full sm:w-auto items-center justify-center sm:min-w-[395px] h-auto min-h-[48px] px-6 sm:px-8 py-3 rounded-[9px] border-2 border-[#cbd9ea] text-[#3f4b5f] text-[17px] sm:text-[20px] font-extrabold text-center">
+                <div
+                  class="inline-flex w-full sm:w-auto items-center justify-center sm:min-w-[395px] h-auto min-h-[48px] px-6 sm:px-8 py-3 rounded-[9px] border-2 border-[#cbd9ea] text-[#3f4b5f] text-[17px] sm:text-[20px] font-extrabold text-center">
                   Tuition fees Average per annum
                 </div>
 
                 <div class="mt-4 space-y-4">
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">Diplomas And Certificates</span>
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">AUD 18,000 - 24,000</span>
                   </div>
 
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">Bachelor's</span>
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">AUD 18,000 - 45,000</span>
                   </div>
 
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">Master's</span>
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">AUD 25,000 - 55,000</span>
                   </div>
@@ -349,7 +383,8 @@
 
               <!-- Living Expenses -->
               <div>
-                <div class="inline-flex w-full sm:w-auto items-center justify-center sm:min-w-[435px] h-auto min-h-[48px] px-6 sm:px-8 py-3 rounded-[9px] border-2 border-[#cbd9ea] text-[#3f4b5f] text-[17px] sm:text-[20px] font-extrabold text-center">
+                <div
+                  class="inline-flex w-full sm:w-auto items-center justify-center sm:min-w-[435px] h-auto min-h-[48px] px-6 sm:px-8 py-3 rounded-[9px] border-2 border-[#cbd9ea] text-[#3f4b5f] text-[17px] sm:text-[20px] font-extrabold text-center">
                   Living expenses Average per annum
                 </div>
 
@@ -364,22 +399,26 @@
 
               <!-- Accommodation -->
               <div>
-                <div class="inline-flex w-full sm:w-auto items-center justify-center sm:min-w-[440px] h-auto min-h-[48px] px-6 sm:px-8 py-3 rounded-[9px] border-2 border-[#cbd9ea] text-[#3f4b5f] text-[17px] sm:text-[20px] font-extrabold text-center">
+                <div
+                  class="inline-flex w-full sm:w-auto items-center justify-center sm:min-w-[440px] h-auto min-h-[48px] px-6 sm:px-8 py-3 rounded-[9px] border-2 border-[#cbd9ea] text-[#3f4b5f] text-[17px] sm:text-[20px] font-extrabold text-center">
                   Accommodation Average per month
                 </div>
 
                 <div class="mt-4 space-y-4">
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">On-Campus</span>
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">AUD 360 - 1,170</span>
                   </div>
 
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">Off-Campus Rental</span>
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">AUD 1,460 - 1,760</span>
                   </div>
 
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 bg-white border-2 border-[#cbd9ea] rounded-[17px] px-6 sm:px-10 py-4">
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">Hostel / Homestay</span>
                     <span class="text-[17px] sm:text-[19px] font-extrabold text-black">AUD 360 - 600</span>
                   </div>
@@ -419,23 +458,27 @@
               In Australia
             </h2>
 
-            <div class="mt-10 space-y-6 max-w-[700px] text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
+            <div
+              class="mt-10 space-y-6 max-w-[700px] text-[16px] sm:text-[17px] leading-[1.65] text-black tracking-[0.01em]">
               <p>
-                Australian universities offer scholarships for eligible international students based on academic merit, course choice, institution requirements and overall student profile. Qualified students may receive partial scholarships, fee waivers or other financial support depending on availability.
+                Australian universities offer scholarships for eligible international students based on academic merit,
+                course choice, institution requirements and overall student profile. Qualified students may receive
+                partial scholarships, fee waivers or other financial support depending on availability.
               </p>
 
               <p>
-                Many students can receive scholarship support ranging from partial tuition fee reductions to larger merit-based awards. Regional study opportunities may also be available through scholarship programs that encourage students to study in regional parts of Australia.
+                Many students can receive scholarship support ranging from partial tuition fee reductions to larger
+                merit-based awards. Regional study opportunities may also be available through scholarship programs that
+                encourage students to study in regional parts of Australia.
               </p>
 
               <p>
-                Scholarship availability can vary by university, intake, course level and academic background. That is why it is important to check eligibility early and prepare documents properly before applying.
+                Scholarship availability can vary by university, intake, course level and academic background. That is
+                why it is important to check eligibility early and prepare documents properly before applying.
               </p>
 
-              <a
-                href="/index.html#contact"
-                class="inline-flex items-center justify-center h-[52px] px-8 rounded-[10px] bg-[#25a9d6] text-white text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#168fba] transition"
-              >
+              <a href="/index.html#contact"
+                class="inline-flex items-center justify-center h-[52px] px-8 rounded-[10px] bg-[#25a9d6] text-white text-[15px] font-extrabold uppercase tracking-wide hover:bg-[#168fba] transition">
                 Check Scholarship Eligibility
               </a>
             </div>
@@ -443,49 +486,24 @@
 
           <!-- Right Image Card -->
           <div class="relative flex justify-center lg:justify-end">
-            <div class="relative w-full max-w-[430px] rounded-[26px] bg-white overflow-hidden shadow-[0_18px_45px_rgba(35,74,145,0.12)]">
+            <div
+              class="relative w-full max-w-[430px] rounded-[26px] bg-white overflow-hidden shadow-[0_18px_45px_rgba(35,74,145,0.12)]">
 
               <div class="absolute inset-0 bg-gradient-to-br from-[#f6fff8] via-white to-[#fff7f4]"></div>
 
-              <svg
-                class="absolute inset-0 w-full h-full z-10 pointer-events-none"
-                viewBox="0 0 430 330"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M72 232C95 92 234 72 345 126C421 164 362 270 213 284C67 298 27 189 115 114"
-                  stroke="#293b93"
-                  stroke-width="1.4"
-                  opacity="0.85"
-                />
-                <path
-                  d="M62 88C90 110 112 115 145 109"
-                  stroke="#293b93"
-                  stroke-width="1.4"
-                  opacity="0.85"
-                />
-                <path
-                  d="M72 88L62 88L68 99"
-                  stroke="#293b93"
-                  stroke-width="1.4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  opacity="0.85"
-                />
-                <path
-                  d="M292 54L328 30M306 68L344 43M318 80L354 58"
-                  stroke="#293b93"
-                  stroke-width="1.3"
-                  opacity="0.75"
-                />
+              <svg class="absolute inset-0 w-full h-full z-10 pointer-events-none" viewBox="0 0 430 330" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M72 232C95 92 234 72 345 126C421 164 362 270 213 284C67 298 27 189 115 114" stroke="#293b93"
+                  stroke-width="1.4" opacity="0.85" />
+                <path d="M62 88C90 110 112 115 145 109" stroke="#293b93" stroke-width="1.4" opacity="0.85" />
+                <path d="M72 88L62 88L68 99" stroke="#293b93" stroke-width="1.4" stroke-linecap="round"
+                  stroke-linejoin="round" opacity="0.85" />
+                <path d="M292 54L328 30M306 68L344 43M318 80L354 58" stroke="#293b93" stroke-width="1.3"
+                  opacity="0.75" />
               </svg>
 
-              <img
-                src="/images/scholar-img.webp"
-                alt="Scholarship student in Australia"
-                class="relative z-20 w-full h-[330px] object-contain object-bottom"
-              />
+              <img src="/images/scholar-img.webp" alt="Scholarship student in Australia"
+                class="relative z-20 w-full h-[330px] object-contain object-bottom" />
             </div>
           </div>
 
@@ -495,5 +513,9 @@
 
   </main>
 
+  <!-- Footer -->
+  <div data-component="/src/components/footer.html"></div>
+
 </body>
+
 </html>
