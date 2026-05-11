@@ -8,7 +8,7 @@
         <div class="flex justify-center lg:justify-start">
           <div class="w-full max-w-[420px] h-[420px] lg:h-[490px] rounded-[24px] overflow-hidden">
             <img
-              src="/images/graduation_day_in_vibrant_celebration.avif"
+              src="/images/overseas-education-consultants.webp"
               alt="Graduate student consultation"
               class="w-full h-full object-cover object-center"
             />
@@ -16,7 +16,7 @@
         </div>
 
         <!-- Right Form -->
-        <div class="lg:pr-8 xl:pr-12">
+        <div>
           <!-- Heading -->
           <h2 class="text-white text-[34px] sm:text-[42px] lg:text-[44px] leading-tight font-normal mb-9">
             Let
@@ -32,7 +32,7 @@
             Reach Out To You
           </h2>
 
-          <form id="contactForm" action="#" method="POST" class="space-y-7">
+          <form action="#" method="POST" class="space-y-7">
 
             <!-- Row 1 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,6 +91,23 @@
             <!-- Row 3 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
+                <label for="destination" class="block mb-3 text-white text-[13px] font-medium">
+                  Your preferred study destination
+                </label>
+                <select
+                  id="destination"
+                  name="destination"
+                  class="w-full h-[46px] rounded-[9px] border border-white/80 bg-[#244b93] px-4 text-white outline-none focus:border-white focus:ring-2 focus:ring-white/20"
+                >
+                  <option value="">Select Destination</option>
+                  <option value="australia">Australia</option>
+                  <option value="uk">UK</option>
+                  <option value="usa">USA</option>
+                  <option value="canada">Canada</option>
+                </select>
+              </div>
+
+              <div>
                 <label for="course" class="block mb-3 text-white text-[13px] font-medium">
                   Course
                 </label>
@@ -101,7 +118,10 @@
                   class="w-full h-[46px] rounded-[9px] border border-white/80 bg-transparent px-4 text-white outline-none focus:border-white focus:ring-2 focus:ring-white/20"
                 />
               </div>
+            </div>
 
+            <!-- Row 4 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="month" class="block mb-3 text-white text-[13px] font-medium">
                   When do you plan to study?
@@ -111,7 +131,7 @@
                   name="month"
                   class="w-full h-[46px] rounded-[9px] border border-white/80 bg-[#244b93] px-4 text-white outline-none focus:border-white focus:ring-2 focus:ring-white/20"
                 >
-                  <option value="" selected disabled>Select Month</option>
+                  <option value="">Select Month</option>
                   <option value="january">January</option>
                   <option value="february">February</option>
                   <option value="march">March</option>
@@ -126,10 +146,7 @@
                   <option value="december">December</option>
                 </select>
               </div>
-            </div>
 
-            <!-- Row 4 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="year" class="block mb-3 text-white text-[13px] font-medium">
                   Your preferred year
@@ -139,28 +156,11 @@
                   name="year"
                   class="w-full h-[46px] rounded-[9px] border border-white/80 bg-[#244b93] px-4 text-white outline-none focus:border-white focus:ring-2 focus:ring-white/20"
                 >
-                  <option value="" selected disabled>Select Year</option>
+                  <option value="">Select Year</option>
                   <option value="2026">2026</option>
                   <option value="2027">2027</option>
                   <option value="2028">2028</option>
                 </select>
-              </div>
-
-              <!-- Captcha -->
-              <div>
-                <label for="captcha" class="block mb-3 text-white text-[13px] font-medium">
-                  Captcha: What is <span id="captchaQuestion">7 + 3</span>?
-                </label>
-                <input
-                  id="captcha"
-                  type="text"
-                  name="captcha"
-                  placeholder="Enter answer"
-                  class="w-full h-[46px] rounded-[9px] border border-white/80 bg-transparent px-4 text-white placeholder:text-white/60 outline-none focus:border-white focus:ring-2 focus:ring-white/20"
-                />
-                <p id="captchaError" class="hidden mt-2 text-[13px] text-red-200">
-                  Captcha answer is incorrect.
-                </p>
               </div>
             </div>
 
@@ -168,7 +168,7 @@
             <label class="flex items-start gap-3 text-white text-[13px] sm:text-[14px] leading-relaxed cursor-pointer">
               <input
                 type="checkbox"
-                name="consent"
+                checked
                 class="mt-1 w-4 h-4 rounded border-white/80 bg-transparent accent-[#244b93]"
               />
               <span>
@@ -192,5 +192,3 @@
 
   </div>
 </section>
-
- 

@@ -19,8 +19,10 @@ async function loadComponents() {
     }
   }
 
-  initNavbar();
-  initHeroSlider();
+initNavbar();
+initHeroSlider();
+initFaqAccordion();
+initContactForm();
 }
 
 function initNavbar() {
@@ -220,6 +222,46 @@ function initFaqAccordion() {
   });
 }
 
-setTimeout(initFaqAccordion, 300);
+
+
+// setTimeout(initFaqAccordion, 300);
+
+function initContactForm() {
+  const contactForm = document.getElementById("contactForm");
+  const captchaQuestion = document.getElementById("captchaQuestion");
+  const captchaInput = document.getElementById("captcha");
+  const captchaError = document.getElementById("captchaError");
+
+  if (!contactForm || !captchaQuestion || !captchaInput || !captchaError) return;
+
+  let captchaAnswer = 0;
+
+  function generateCaptcha() {
+    const num1 = Math.floor(Math.random() * 9) + 1;
+    const num2 = Math.floor(Math.random() * 9) + 1;
+
+    captchaAnswer = num1 + num2;
+    captchaQuestion.textContent = `${num1} + ${num2}`;
+  }
+
+  generateCaptcha();
+
+  contactForm.addEventListener("submit", function (e) {
+    const userAnswer = Number(captchaInput.value.trim());
+
+    if (userAnswer !== captchaAnswer) {
+      e.preventDefault();
+
+      captchaError.classList.remove("hidden");
+      captchaInput.value = "";
+      captchaInput.focus();
+
+      generateCaptcha();
+      return;
+    }
+
+    captchaError.classList.add("hidden");
+  });
+}
 
 loadComponents();
