@@ -21,7 +21,7 @@
 <body class="font-poppins bg-white">
 
   <!-- Navbar -->
-    <div data-component="/components/navbar.html"></div>
+  <div data-component="/components/navbar.html"></div>
 
   <main>
 
@@ -53,47 +53,42 @@
           <!-- Sidebar -->
           <aside class="space-y-6">
 
-            <div>
-              <h3 class="text-[#001f5c] text-[22px] font-extrabold mb-4">
-                More Services
-              </h3>
+            <div class="space-y-3" id="serviceSidebarLinks">
+              <a href="/service-details/course/" data-service-link="course"
+                class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                Course Selection
+                <span>→</span>
+              </a>
 
-              <div class="space-y-3" id="serviceSidebarLinks">
-                <a href="/service-details.html?service=admission"
-                  data-service-link="admission"
-                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
-                  Admission
-                  <span>→</span>
-                </a>
+              <a href="/service-details/admission/" data-service-link="admission"
+                class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                Admission
+                <span>→</span>
+              </a>
 
-                <a href="/service-details.html?service=scholarships"
-                  data-service-link="scholarships"
-                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
-                  Scholarships
-                  <span>→</span>
-                </a>
+              <a href="/service-details/visa/" data-service-link="visa"
+                class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                Visa Guidance
+                <span>→</span>
+              </a>
 
-                <a href="/service-details.html?service=visa"
-                  data-service-link="visa"
-                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
-                  Visa Guidance
-                  <span>→</span>
-                </a>
+              <a href="/service-details/career/" data-service-link="career"
+                class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                Career Counseling
+                <span>→</span>
+              </a>
 
-                <a href="/service-details.html?service=departure"
-                  data-service-link="departure"
-                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
-                  Departure Guidance
-                  <span>→</span>
-                </a>
+              <a href="/service-details/departure/" data-service-link="departure"
+                class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                Departure Guidance
+                <span>→</span>
+              </a>
 
-                <a href="/service-details.html?service=career"
-                  data-service-link="career"
-                  class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
-                  Career Counseling
-                  <span>→</span>
-                </a>
-              </div>
+              <a href="/service-details/consultation/" data-service-link="consultation"
+                class="service-link flex items-center justify-between bg-[#eef5d7] text-[#001f5c] px-4 py-3 rounded-[6px] text-[15px] font-bold hover:bg-[#9ac70f] hover:text-white transition">
+                Free Consultation
+                <span>→</span>
+              </a>
             </div>
 
             <div class="bg-[#2b446f] rounded-[8px] p-5 text-white">
@@ -125,9 +120,7 @@
 
           <!-- Right Content -->
           <article>
-            <img id="serviceImage"
-              src=""
-              alt=""
+            <img id="serviceImage" src="" alt=""
               class="w-full h-[260px] sm:h-[330px] lg:h-[390px] object-cover rounded-[8px] mb-9" />
 
             <h2 id="serviceTitle"
@@ -148,7 +141,7 @@
 
               <p id="serviceCtaText" class="text-[#10285d] text-[16px] leading-[1.7] mb-5"></p>
 
-              <a href="/#consultation"
+              <a href="/contact.html"
                 class="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[#ef6c00] text-white text-[14px] font-extrabold uppercase hover:bg-[#d95f00] transition">
                 Get Free Consultation
               </a>
@@ -165,4 +158,5 @@
   <div data-component="/components/footer.html"></div>
 
 </body>
+
 </html>

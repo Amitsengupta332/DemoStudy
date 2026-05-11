@@ -258,59 +258,79 @@ const services = {
   }
 };
 
-const params = new URLSearchParams(window.location.search);
-const serviceKey = params.get("service") || "admission";
-const service = services[serviceKey] || services.admission;
+// const params = new URLSearchParams(window.location.search);
+// const serviceKey = params.get("service") || "admission";
 
-document.title = `${service.bannerTitle} - Study Australia`;
 
-document.getElementById("serviceBannerTitle").textContent = service.bannerTitle;
-document.getElementById("serviceBreadcrumb").textContent = service.breadcrumb;
+function getServiceKey() {
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
 
-const serviceImage = document.getElementById("serviceImage");
-serviceImage.src = service.image;
-serviceImage.alt = service.imageAlt;
-
-document.getElementById("serviceTitle").textContent = service.title;
-
-document.getElementById("serviceIntro").innerHTML = service.intro
-  .map((paragraph) => `<p>${paragraph}</p>`)
-  .join("");
-
-document.getElementById("serviceSteps").innerHTML = service.steps
-  .map((step) => {
-    return `
-      <div class="flex gap-5">
-        <div class="shrink-0 w-14 h-14 rounded-[10px] bg-[#eaf1ff] flex items-center justify-center text-[26px]">
-          ${step.icon}
-        </div>
-        <div>
-          <h3 class="text-[#001f5c] text-[22px] font-extrabold mb-2">
-            ${step.title}
-          </h3>
-          <p class="text-[#10285d] text-[16px] leading-[1.7]">
-            ${step.text}
-          </p>
-        </div>
-      </div>
-    `;
-  })
-  .join("");
-
-document.getElementById("serviceWhyTitle").textContent = service.whyTitle;
-
-document.getElementById("serviceWhyList").innerHTML = service.whyList
-  .map((item) => `<li>${item}</li>`)
-  .join("");
-
-document.getElementById("serviceCtaTitle").textContent = service.ctaTitle;
-document.getElementById("serviceCtaText").textContent = service.ctaText;
-
-document.querySelectorAll(".service-link").forEach((link) => {
-  const linkKey = link.getAttribute("data-service-link");
-
-  if (linkKey === serviceKey || (!params.get("service") && linkKey === "admission")) {
-    link.classList.remove("bg-[#eef5d7]", "text-[#001f5c]");
-    link.classList.add("bg-[#9ac70f]", "text-white");
+  if (pathParts[0] === "service-details" && pathParts[1]) {
+    return pathParts[1];
   }
-});
+
+  return "admission";
+}
+
+function renderServiceDetails() {
+  const serviceKey = getServiceKey();
+  const service = services[serviceKey] || services.admission;
+
+  document.title = `${service.bannerTitle} - Study Australia`;
+
+  document.getElementById("serviceBannerTitle").textContent = service.bannerTitle;
+  document.getElementById("serviceBreadcrumb").textContent = service.breadcrumb;
+
+  const serviceImage = document.getElementById("serviceImage");
+  serviceImage.src = service.image;
+  serviceImage.alt = service.imageAlt;
+
+  document.getElementById("serviceTitle").textContent = service.title;
+
+  document.getElementById("serviceIntro").innerHTML = service.intro
+    .map((paragraph) => `<p>${paragraph}</p>`)
+    .join("");
+
+  document.getElementById("serviceSteps").innerHTML = service.steps
+    .map((step) => {
+      return `
+        <div class="flex gap-5">
+          <div class="shrink-0 w-14 h-14 rounded-[10px] bg-[#eaf1ff] flex items-center justify-center text-[26px]">
+            ${step.icon}
+          </div>
+          <div>
+            <h3 class="text-[#001f5c] text-[22px] font-extrabold mb-2">
+              ${step.title}
+            </h3>
+            <p class="text-[#10285d] text-[16px] leading-[1.7]">
+              ${step.text}
+            </p>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+
+  document.getElementById("serviceWhyTitle").textContent = service.whyTitle;
+
+  document.getElementById("serviceWhyList").innerHTML = service.whyList
+    .map((item) => `<li>${item}</li>`)
+    .join("");
+
+  document.getElementById("serviceCtaTitle").textContent = service.ctaTitle;
+  document.getElementById("serviceCtaText").textContent = service.ctaText;
+
+  document.querySelectorAll(".service-link").forEach((link) => {
+    const linkKey = link.getAttribute("data-service-link");
+
+    link.classList.remove("bg-[#9ac70f]", "text-white");
+    link.classList.add("bg-[#eef5d7]", "text-[#001f5c]");
+
+    if (linkKey === serviceKey) {
+      link.classList.remove("bg-[#eef5d7]", "text-[#001f5c]");
+      link.classList.add("bg-[#9ac70f]", "text-white");
+    }
+  });
+}
+
+renderServiceDetails();
