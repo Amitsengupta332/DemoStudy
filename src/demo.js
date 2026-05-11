@@ -20,6 +20,7 @@ async function loadComponents() {
   }
 
   initNavbar();
+  initHeroSlider();
 }
 
 function initNavbar() {
@@ -71,5 +72,154 @@ function initNavbar() {
   handleScrollNavbar();
   window.addEventListener("scroll", handleScrollNavbar);
 }
+
+function initHeroSlider() {
+  const heroSlides = document.querySelectorAll(".hero-slide");
+  const heroPrev = document.getElementById("heroPrev");
+  const heroNext = document.getElementById("heroNext");
+
+  const heroTitleOne = document.getElementById("heroTitleOne");
+  const heroTitleTwo = document.getElementById("heroTitleTwo");
+  const heroTitleThree = document.getElementById("heroTitleThree");
+  const heroSlogan = document.getElementById("heroSlogan");
+  const heroTags = document.getElementById("heroTags");
+
+  if (!heroSlides.length) return;
+
+  const heroContent = [
+    {
+      titleOne: "Your Pathway",
+      titleTwo: "to World-Class",
+      titleThree: "Australian Education.",
+      slogan: "Grow. Study. Succeed.",
+      tags: [
+        "Edu loan assistance",
+        "English test preparation",
+        "Personalised counselling",
+        "Application processing",
+        "Scholarship options",
+        "Visa guidance",
+      ],
+    },
+    {
+      titleOne: "Study Smart",
+      titleTwo: "Build Your Future",
+      titleThree: "in Australia.",
+      slogan: "Grow. Study. Succeed.",
+      tags: [
+        "University selection",
+        "Course counselling",
+        "Admission support",
+        "Document preparation",
+        "SOP guidance",
+        "Career planning",
+      ],
+    },
+    {
+      titleOne: "Start Strong",
+      titleTwo: "With Trusted",
+      titleThree: "Study Guidance.",
+      slogan: "Grow. Study. Succeed.",
+      tags: [
+        "Visa guidance",
+        "Scholarship options",
+        "Pre-departure briefing",
+        "Application processing",
+        "Student support",
+        "Australia counselling",
+      ],
+    },
+  ];
+
+  let heroIndex = 0;
+  let heroTimer;
+
+  function renderTags(tags) {
+    heroTags.innerHTML = tags
+      .map(
+        (tag) => `
+          <span class="font-['Oswald'] bg-[#70264a]/95 text-white px-2 py-[2px] text-[16px] sm:text-[21px] font-semibold leading-tight">
+            ${tag}
+          </span>
+        `,
+      )
+      .join("");
+  }
+
+  function showHeroSlide(index) {
+    heroSlides.forEach((slide, i) => {
+      slide.classList.toggle("opacity-100", i === index);
+      slide.classList.toggle("opacity-0", i !== index);
+    });
+
+    heroTitleOne.textContent = heroContent[index].titleOne;
+    heroTitleTwo.textContent = heroContent[index].titleTwo;
+    heroTitleThree.textContent = heroContent[index].titleThree;
+    heroSlogan.textContent = heroContent[index].slogan;
+    renderTags(heroContent[index].tags);
+  }
+
+  function nextSlide() {
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    showHeroSlide(heroIndex);
+  }
+
+  function prevSlide() {
+    heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+    showHeroSlide(heroIndex);
+  }
+
+  function startHeroSlider() {
+    heroTimer = setInterval(nextSlide, 4000);
+  }
+
+  function resetHeroSlider() {
+    clearInterval(heroTimer);
+    startHeroSlider();
+  }
+
+  if (heroNext) {
+    heroNext.addEventListener("click", () => {
+      nextSlide();
+      resetHeroSlider();
+    });
+  }
+
+  if (heroPrev) {
+    heroPrev.addEventListener("click", () => {
+      prevSlide();
+      resetHeroSlider();
+    });
+  }
+
+  showHeroSlide(heroIndex);
+  startHeroSlider();
+}
+
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq-btn");
+    const content = item.querySelector(".faq-content");
+    const icon = item.querySelector(".faq-icon");
+
+    button.addEventListener("click", () => {
+      const isOpen = !content.classList.contains("hidden");
+
+      faqItems.forEach((otherItem) => {
+        otherItem.querySelector(".faq-content").classList.add("hidden");
+        otherItem.querySelector(".faq-icon").textContent = "+";
+      });
+
+      if (!isOpen) {
+        content.classList.remove("hidden");
+        icon.textContent = "−";
+      }
+    });
+  });
+}
+
+setTimeout(initFaqAccordion, 300);
 
 loadComponents();
